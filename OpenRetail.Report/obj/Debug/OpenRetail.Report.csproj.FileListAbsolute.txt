@@ -1,0 +1,5 @@
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Report\bin\Debug\OpenRetail.Report.dll
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Report\bin\Debug\OpenRetail.Report.pdb
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Report\obj\Debug\OpenRetail.Report.csprojResolveAssemblyReference.cache
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Report\obj\Debug\OpenRetail.Report.dll
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Report\obj\Debug\OpenRetail.Report.pdb

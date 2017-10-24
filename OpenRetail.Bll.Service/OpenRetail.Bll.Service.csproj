@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A5E29AE-358A-4129-B28A-9A1425A90DE0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenRetail.Bll.Service</RootNamespace>
+    <AssemblyName>OpenRetail.Bll.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.87.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\ClosedXML.0.87.1\lib\net40\ClosedXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentValidation">
+      <HintPath>..\..\lib\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\log4net.2.0.8\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\VersionInfo.cs">
+      <Link>VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="AlamatKirimBll.cs" />
+    <Compile Include="AlasanPenyesuaianStokBll.cs" />
+    <Compile Include="BeliProdukBll.cs" />
+    <Compile Include="CetakNotaBll.cs" />
+    <Compile Include="CetakNotaDummyBll.cs" />
+    <Compile Include="CustomerBll.cs" />
+    <Compile Include="DatabaseVersionBll.cs" />
+    <Compile Include="DbConnectionHelper.cs" />
+    <Compile Include="FooterNotaMiniPosBll.cs" />
+    <Compile Include="GajiKaryawanBll.cs" />
+    <Compile Include="GolonganBll.cs" />
+    <Compile Include="HeaderNotaBll.cs" />
+    <Compile Include="HeaderNotaMiniPosBll.cs" />
+    <Compile Include="ImportExportDataCustomerBll.cs" />
+    <Compile Include="ImportExportDataGolonganBll.cs" />
+    <Compile Include="ImportExportDataProdukBll.cs" />
+    <Compile Include="ImportExportDataSupplierBll.cs" />
+    <Compile Include="ItemMenuBll.cs" />
+    <Compile Include="JabatanBll.cs" />
+    <Compile Include="JenisPengeluaranBll.cs" />
+    <Compile Include="JualProdukBll.cs" />
+    <Compile Include="KabupatenBll.cs" />
+    <Compile Include="KaryawanBll.cs" />
+    <Compile Include="KasbonBll.cs" />
+    <Compile Include="LabelAlamatKirimBll.cs" />
+    <Compile Include="LabelNotaBll.cs" />
+    <Compile Include="MenuBll.cs" />
+    <Compile Include="PembayaranHutangProdukBll.cs" />
+    <Compile Include="PembayaranKasbonBll.cs" />
+    <Compile Include="PembayaranPiutangProdukBll.cs" />
+    <Compile Include="PengeluaranBiayaBll.cs" />
+    <Compile Include="PenggunaBll.cs" />
+    <Compile Include="PenyesuaianStokBll.cs" />
+    <Compile Include="ProdukBll.cs" />
+    <Compile Include="ProfilBll.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\ReportBeliProdukBll.cs" />
+    <Compile Include="Report\ReportGajiKaryawanBll.cs" />
+    <Compile Include="Report\ReportHutangBeliProdukBll.cs" />
+    <Compile Include="Report\ReportJualProdukBll.cs" />
+    <Compile Include="Report\ReportKartuHutangBll.cs" />
+    <Compile Include="Report\ReportKartuPiutangBll.cs" />
+    <Compile Include="Report\ReportKasbonBll.cs" />
+    <Compile Include="Report\ReportPembayaranHutangBeliProdukBll.cs" />
+    <Compile Include="Report\ReportPembayaranPiutangJualProdukBll.cs" />
+    <Compile Include="Report\ReportPengeluaranBiayaBll.cs" />
+    <Compile Include="Report\ReportPiutangJualProdukBll.cs" />
+    <Compile Include="Report\ReportReturBeliProdukBll.cs" />
+    <Compile Include="Report\ReportReturJualProdukBll.cs" />
+    <Compile Include="Report\ReportStokProdukBll.cs" />
+    <Compile Include="ReturBeliProdukBll.cs" />
+    <Compile Include="ReturJualProdukBll.cs" />
+    <Compile Include="RoleBll.cs" />
+    <Compile Include="RolePrivilegeBll.cs" />
+    <Compile Include="SupplierBll.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenRetail.Bll.Api\OpenRetail.Bll.Api.csproj">
+      <Project>{24e6fae6-2f30-4b86-bbe7-4c88fb631956}</Project>
+      <Name>OpenRetail.Bll.Api</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenRetail.Model\OpenRetail.Model.csproj">
+      <Project>{6b9cabad-1a6c-4323-8548-bd5f3c12613c}</Project>
+      <Name>OpenRetail.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenRetail.Repository.Api\OpenRetail.Repository.Api.csproj">
+      <Project>{981af3c6-f601-45ad-9f33-abbc7cc1f00f}</Project>
+      <Name>OpenRetail.Repository.Api</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenRetail.Repository.Service\OpenRetail.Repository.Service.csproj">
+      <Project>{ffef9dee-c608-4160-baec-1723185677f6}</Project>
+      <Name>OpenRetail.Repository.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

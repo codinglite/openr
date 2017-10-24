@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FFEF9DEE-C608-4160-BAEC-1723185677F6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenRetail.Repository.Service</RootNamespace>
+    <AssemblyName>OpenRetail.Repository.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Dapper.1.50.2\lib\net40\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dapper.Contrib, Version=1.50.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Dapper.Contrib.1.50.0\lib\net40\Dapper.Contrib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\log4net.2.0.8\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\VersionInfo.cs">
+      <Link>VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="AlasanPenyesuaianStokRepository.cs" />
+    <Compile Include="BeliProdukRepository.cs" />
+    <Compile Include="CetakNotaDummyRepository.cs" />
+    <Compile Include="CetakNotaRepository.cs" />
+    <Compile Include="CustomerRepository.cs" />
+    <Compile Include="DapperContext.cs" />
+    <Compile Include="DatabaseVersionRepository.cs" />
+    <Compile Include="FooterNotaMiniPosRepository.cs" />
+    <Compile Include="GajiKaryawanRepository.cs" />
+    <Compile Include="GolonganRepository.cs" />
+    <Compile Include="HargaGrosirRepository.cs" />
+    <Compile Include="HeaderNotaMiniPosRepository.cs" />
+    <Compile Include="HeaderNotaRepository.cs" />
+    <Compile Include="ItemMenuRepository.cs" />
+    <Compile Include="JabatanRepository.cs" />
+    <Compile Include="JenisPengeluaranRepository.cs" />
+    <Compile Include="JualProdukRepository.cs" />
+    <Compile Include="KabupatenRepository.cs" />
+    <Compile Include="KaryawanRepository.cs" />
+    <Compile Include="KasbonRepository.cs" />
+    <Compile Include="LabelNotaRepository.cs" />
+    <Compile Include="Log4NetRepository.cs" />
+    <Compile Include="MenuRepository.cs" />
+    <Compile Include="PembayaranHutangProdukRepository.cs" />
+    <Compile Include="PembayaranKasbonRepository.cs" />
+    <Compile Include="PembayaranPiutangProdukRepository.cs" />
+    <Compile Include="PengeluaranBiayaRepository.cs" />
+    <Compile Include="PenggunaRepository.cs" />
+    <Compile Include="PenyesuaianStokRepository.cs" />
+    <Compile Include="ProdukRepository.cs" />
+    <Compile Include="ProfilRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\ReportBeliProdukRepository.cs" />
+    <Compile Include="Report\ReportGajiKaryawanRepository.cs" />
+    <Compile Include="Report\ReportHutangBeliProdukRepository.cs" />
+    <Compile Include="Report\ReportJualProdukRepository.cs" />
+    <Compile Include="Report\ReportKartuHutangRepository.cs" />
+    <Compile Include="Report\ReportKartuPiutangRepository.cs" />
+    <Compile Include="Report\ReportKasbonRepository.cs" />
+    <Compile Include="Report\ReportPembayaranHutangBeliProdukRepository.cs" />
+    <Compile Include="Report\ReportPembayaranPiutangJualProdukRepository.cs" />
+    <Compile Include="Report\ReportPengeluaranBiayaRepository.cs" />
+    <Compile Include="Report\ReportPiutangJualProdukRepository.cs" />
+    <Compile Include="Report\ReportReturBeliProdukRepository.cs" />
+    <Compile Include="Report\ReportReturJualProdukRepository.cs" />
+    <Compile Include="Report\ReportStokProdukRepository.cs" />
+    <Compile Include="ReturBeliProdukRepository.cs" />
+    <Compile Include="ReturJualProdukRepository.cs" />
+    <Compile Include="RolePrivilegeRepository.cs" />
+    <Compile Include="RoleRepository.cs" />
+    <Compile Include="SupplierRepository.cs" />
+    <Compile Include="UnitOfWork.cs" />
+    <Compile Include="WhereBuilder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenRetail.Model\OpenRetail.Model.csproj">
+      <Project>{6b9cabad-1a6c-4323-8548-bd5f3c12613c}</Project>
+      <Name>OpenRetail.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenRetail.Repository.Api\OpenRetail.Repository.Api.csproj">
+      <Project>{981af3c6-f601-45ad-9f33-abbc7cc1f00f}</Project>
+      <Name>OpenRetail.Repository.Api</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

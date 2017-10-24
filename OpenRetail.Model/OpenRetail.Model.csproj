@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6B9CABAD-1A6C-4323-8548-BD5F3C12613C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenRetail.Model</RootNamespace>
+    <AssemblyName>OpenRetail.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Dapper.1.50.2\lib\net40\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dapper.Contrib, Version=1.50.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Dapper.Contrib.1.50.0\lib\net40\Dapper.Contrib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentValidation">
+      <HintPath>..\..\lib\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization">
+      <HintPath>..\..\lib\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms">
+      <HintPath>..\..\lib\Microsoft.ReportViewer.Runtime.WebForms.12.0.2402.15\lib\Microsoft.ReportViewer.WebForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms">
+      <HintPath>..\..\lib\Microsoft.Reporting.WinForms.v11.1.0.0.0\lib\Microsoft.ReportViewer.WinForms.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Microsoft.Reporting.WinForms.v11.1.0.0.0\lib\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\VersionInfo.cs">
+      <Link>VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="AlamatKirim.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AlasanPenyesuaianStok.cs" />
+    <Compile Include="BeliProduk.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="DatabaseVersion.cs" />
+    <Compile Include="FooterNotaMiniPos.cs" />
+    <Compile Include="GajiKaryawan.cs" />
+    <Compile Include="HargaGrosir.cs" />
+    <Compile Include="HeaderNota.cs" />
+    <Compile Include="HeaderNotaMiniPos.cs" />
+    <Compile Include="ItemPengeluaranBiaya.cs" />
+    <Compile Include="Kabupaten.cs" />
+    <Compile Include="KabupatenAsal.cs" />
+    <Compile Include="KabupatenTujuan.cs" />
+    <Compile Include="Kasbon.cs" />
+    <Compile Include="LabelAlamatKirim.cs" />
+    <Compile Include="LabelNota.cs" />
+    <Compile Include="Nota\NotaPembelian.cs" />
+    <Compile Include="Nota\NotaPenjualan.cs" />
+    <Compile Include="PembayaranKasbon.cs" />
+    <Compile Include="PengaturanUmum.cs" />
+    <Compile Include="PengeluaranBiaya.cs" />
+    <Compile Include="Provinsi.cs" />
+    <Compile Include="RajaOngkir\cost.cs" />
+    <Compile Include="RajaOngkir\costs.cs" />
+    <Compile Include="RajaOngkir\destination_details.cs" />
+    <Compile Include="RajaOngkir\origin_details.cs" />
+    <Compile Include="RajaOngkir\query.cs" />
+    <Compile Include="RajaOngkir\rajaongkir.cs" />
+    <Compile Include="RajaOngkir\results.cs" />
+    <Compile Include="RajaOngkir\root.cs" />
+    <Compile Include="RajaOngkir\status.cs" />
+    <Compile Include="Report\ReportGajiKaryawan.cs" />
+    <Compile Include="Report\ReportHutangPembelianProdukDetail.cs" />
+    <Compile Include="Report\ReportHutangPembelianProdukHeader.cs" />
+    <Compile Include="Report\ReportKartuHutang.cs" />
+    <Compile Include="Report\ReportKartuPiutang.cs" />
+    <Compile Include="Report\ReportKasbonDetail.cs" />
+    <Compile Include="Report\ReportKasbonHeader.cs" />
+    <Compile Include="Report\ReportPembayaranHutangPembelianProdukDetail.cs" />
+    <Compile Include="Report\ReportPembayaranHutangPembelianProdukHeader.cs" />
+    <Compile Include="Report\ReportPembayaranPiutangPenjualanProdukDetail.cs" />
+    <Compile Include="Report\ReportPembayaranPiutangPenjualanProdukHeader.cs" />
+    <Compile Include="Report\ReportPembelianProdukDetail.cs" />
+    <Compile Include="Report\ReportPembelianProdukHeader.cs" />
+    <Compile Include="EntityState.cs" />
+    <Compile Include="Golongan.cs" />
+    <Compile Include="ItemBeliProduk.cs" />
+    <Compile Include="ItemJualProduk.cs" />
+    <Compile Include="ItemMenu.cs" />
+    <Compile Include="ItemPembayaranHutangProduk.cs" />
+    <Compile Include="ItemPembayaranPiutangProduk.cs" />
+    <Compile Include="ItemReturBeliProduk.cs" />
+    <Compile Include="ItemReturJualProduk.cs" />
+    <Compile Include="Jabatan.cs" />
+    <Compile Include="JenisPengeluaran.cs" />
+    <Compile Include="JualProduk.cs" />
+    <Compile Include="Karyawan.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="MenuAplikasi.cs" />
+    <Compile Include="ModelExtension.cs" />
+    <Compile Include="PembayaranHutangProduk.cs" />
+    <Compile Include="PembayaranPiutangProduk.cs" />
+    <Compile Include="Pengguna.cs" />
+    <Compile Include="PenyesuaianStok.cs" />
+    <Compile Include="Produk.cs" />
+    <Compile Include="Profil.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReferencesType.cs" />
+    <Compile Include="Report\ReportPengeluaranBiaya.cs" />
+    <Compile Include="Report\ReportPenjualanProduk.cs" />
+    <Compile Include="Report\ReportPenjualanProdukDetail.cs" />
+    <Compile Include="Report\ReportPenjualanProdukHeader.cs" />
+    <Compile Include="Report\ReportPenyesuaianStokProduk.cs" />
+    <Compile Include="Report\ReportPiutangPenjualanProdukDetail.cs" />
+    <Compile Include="Report\ReportPiutangPenjualanProdukHeader.cs" />
+    <Compile Include="Report\ReportPiutangPenjualanProduk.cs" />
+    <Compile Include="Report\ReportReturPembelianProdukDetail.cs" />
+    <Compile Include="Report\ReportReturPembelianProdukHeader.cs" />
+    <Compile Include="Report\ReportReturPenjualanProdukDetail.cs" />
+    <Compile Include="Report\ReportReturPenjualanProdukHeader.cs" />
+    <Compile Include="Report\ReportStokProduk.cs" />
+    <Compile Include="ReturBeliProduk.cs" />
+    <Compile Include="ReturJualProduk.cs" />
+    <Compile Include="Role.cs" />
+    <Compile Include="RolePrivilege.cs" />
+    <Compile Include="Shift.cs" />
+    <Compile Include="Supplier.cs" />
+    <Compile Include="ValidationError.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,17 @@
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Repository.Service\bin\Debug\OpenRetail.Repository.Service.dll
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Repository.Service\bin\Debug\OpenRetail.Repository.Service.pdb
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Repository.Service\bin\Debug\Dapper.Contrib.dll
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Repository.Service\bin\Debug\Dapper.dll
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Repository.Service\bin\Debug\log4net.dll
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Repository.Service\bin\Debug\OpenRetail.Model.dll
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Repository.Service\bin\Debug\OpenRetail.Repository.Api.dll
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Repository.Service\bin\Debug\FluentValidation.dll
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Repository.Service\bin\Debug\Newtonsoft.Json.dll
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Repository.Service\bin\Debug\OpenRetail.Model.pdb
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Repository.Service\bin\Debug\OpenRetail.Repository.Api.pdb
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Repository.Service\bin\Debug\Dapper.xml
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Repository.Service\bin\Debug\log4net.xml
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Repository.Service\bin\Debug\Newtonsoft.Json.xml
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Repository.Service\obj\Debug\OpenRetail.Repository.Service.csprojResolveAssemblyReference.cache
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Repository.Service\obj\Debug\OpenRetail.Repository.Service.dll
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Repository.Service\obj\Debug\OpenRetail.Repository.Service.pdb

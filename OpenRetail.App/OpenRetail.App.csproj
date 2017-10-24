@@ -1,0 +1,1031 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C797EA1B-E0B1-4A57-8906-CF7C621E60EC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenRetail.App</RootNamespace>
+    <AssemblyName>OpenRetail</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>main-icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoUpdater.NET, Version=1.4.0.0, Culture=neutral, PublicKeyToken=942f95247e354701, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Autoupdater.NET.Official.1.4\lib\net40\AutoUpdater.NET.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.87.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\ClosedXML.0.87.1\lib\net40\ClosedXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrashReporter.NET, Version=1.5.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\CrashReporter.NET.Official.1.5.2\lib\net40\CrashReporter.NET.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Dapper.1.50.2\lib\net40\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dapper.Contrib, Version=1.50.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Dapper.Contrib.1.50.0\lib\net40\Dapper.Contrib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\log4net.2.0.8\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mono.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Npgsql.2.2.7\lib\net40\Mono.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Npgsql, Version=2.2.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Npgsql.2.2.7\lib\net40\Npgsql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\RestSharp.105.2.3\lib\net4\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Base, Version=15.2400.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Syncfusion.Grid.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Windows, Version=15.2400.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Syncfusion.Grid.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Windows.XmlSerializers, Version=15.2400.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Syncfusion.Grid.Windows.XmlSerializers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.GridConverter.Windows, Version=15.2400.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Syncfusion.GridConverter.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.GridHelperClasses.Windows, Version=15.2400.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Syncfusion.GridHelperClasses.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Base, Version=15.2400.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Syncfusion.Shared.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Windows, Version=15.2400.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Syncfusion.Shared.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Base, Version=15.2400.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Syncfusion.Tools.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Windows, Version=15.2400.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Syncfusion.Tools.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WaitCursor">
+      <HintPath>..\..\lib\WaitCursor.dll</HintPath>
+    </Reference>
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.16.0.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\DockPanelSuite.2.16.1\lib\net40\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\VersionInfo.cs">
+      <Link>VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Helper\AppConfigHelper.cs" />
+    <Compile Include="Helper\DatabaseVersionHelper.cs" />
+    <Compile Include="Helper\ESCCommandHelper.cs" />
+    <Compile Include="Helper\RawPrinterHelper.cs" />
+    <Compile Include="Helper\ReportViewerPrintHelper.cs" />
+    <Compile Include="Helper\ColorCollection.cs" />
+    <Compile Include="Helper\ColorManagerHelper.cs" />
+    <Compile Include="Helper\CryptoHelper.cs" />
+    <Compile Include="Helper\DateTimeHelper.cs" />
+    <Compile Include="Helper\DayMonthHelper.cs" />
+    <Compile Include="Helper\FillDataHelper.cs" />
+    <Compile Include="Helper\GridControlColSizeHelper.cs" />
+    <Compile Include="Helper\GridListControlHelper.cs" />
+    <Compile Include="Helper\GridListControlProperties.cs" />
+    <Compile Include="Helper\IListener.cs" />
+    <Compile Include="Helper\KeyPressHelper.cs" />
+    <Compile Include="Helper\MsgHelper.cs" />
+    <Compile Include="Helper\NumberHelper.cs" />
+    <Compile Include="Helper\RolePrivilegeHelper.cs" />
+    <Compile Include="Helper\StringHelper.cs" />
+    <Compile Include="Helper\ThreadHelper.cs" />
+    <Compile Include="Helper\Utils.cs" />
+    <Compile Include="Laporan\FrmLapPenggajianKaryawan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FrmLapPenggajianKaryawan.Designer.cs">
+      <DependentUpon>FrmLapPenggajianKaryawan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FrmLapPengeluaranBiaya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FrmLapPengeluaranBiaya.Designer.cs">
+      <DependentUpon>FrmLapPengeluaranBiaya.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FrmLapPenyesuaianStok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FrmLapPenyesuaianStok.Designer.cs">
+      <DependentUpon>FrmLapPenyesuaianStok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FrmLapPenjualanPerProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FrmLapPenjualanPerProduk.Designer.cs">
+      <DependentUpon>FrmLapPenjualanPerProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FrmLapPembayaranPiutangPenjualanProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FrmLapPembayaranPiutangPenjualanProduk.Designer.cs">
+      <DependentUpon>FrmLapPembayaranPiutangPenjualanProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FrmLapKartuPiutangPenjualanProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FrmLapKartuPiutangPenjualanProduk.Designer.cs">
+      <DependentUpon>FrmLapKartuPiutangPenjualanProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FrmLapKasbon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FrmLapKasbon.Designer.cs">
+      <DependentUpon>FrmLapKasbon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FrmLapReturPenjualanProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FrmLapReturPenjualanProduk.Designer.cs">
+      <DependentUpon>FrmLapReturPenjualanProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FrmLapPiutangPenjualanProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FrmLapPiutangPenjualanProduk.Designer.cs">
+      <DependentUpon>FrmLapPiutangPenjualanProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FrmLapPenjualanProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FrmLapPenjualanProduk.Designer.cs">
+      <DependentUpon>FrmLapPenjualanProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FrmLapReturPembelianProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FrmLapReturPembelianProduk.Designer.cs">
+      <DependentUpon>FrmLapReturPembelianProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FrmLapPembayaranHutangPembelianProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FrmLapPembayaranHutangPembelianProduk.Designer.cs">
+      <DependentUpon>FrmLapPembayaranHutangPembelianProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FrmLapHutangPembelianProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FrmLapHutangPembelianProduk.Designer.cs">
+      <DependentUpon>FrmLapHutangPembelianProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FrmLapKartuHutangPembelianProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FrmLapKartuHutangPembelianProduk.Designer.cs">
+      <DependentUpon>FrmLapKartuHutangPembelianProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FrmLapPembelianProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FrmLapPembelianProduk.Designer.cs">
+      <DependentUpon>FrmLapPembelianProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FrmLapStokProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FrmLapStokProduk.Designer.cs">
+      <DependentUpon>FrmLapStokProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lookup\FrmLookupCekOngkir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lookup\FrmLookupCekOngkir.Designer.cs">
+      <DependentUpon>FrmLookupCekOngkir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lookup\FrmLookupItemNota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lookup\FrmLookupItemNota.Designer.cs">
+      <DependentUpon>FrmLookupItemNota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lookup\FrmLookupMinimalStok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lookup\FrmLookupMinimalStok.Designer.cs">
+      <DependentUpon>FrmLookupMinimalStok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lookup\FrmLookupNota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lookup\FrmLookupNota.Designer.cs">
+      <DependentUpon>FrmLookupNota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lookup\FrmLookupReferensi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lookup\FrmLookupReferensi.Designer.cs">
+      <DependentUpon>FrmLookupReferensi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainProgram.cs" />
+    <Compile Include="Pengaturan\FrmPengaturanUmum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pengaturan\FrmPengaturanUmum.Designer.cs">
+      <DependentUpon>FrmPengaturanUmum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pengaturan\FrmProfilPerusahaan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pengaturan\FrmProfilPerusahaan.Designer.cs">
+      <DependentUpon>FrmProfilPerusahaan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pengaturan\FrmEntryOperator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pengaturan\FrmEntryOperator.Designer.cs">
+      <DependentUpon>FrmEntryOperator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pengaturan\FrmEntryHakAkses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pengaturan\FrmEntryHakAkses.Designer.cs">
+      <DependentUpon>FrmEntryHakAkses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pengaturan\FrmListOperator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pengaturan\FrmListOperator.Designer.cs">
+      <DependentUpon>FrmListOperator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pengaturan\FrmListHakAkses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pengaturan\FrmListHakAkses.Designer.cs">
+      <DependentUpon>FrmListHakAkses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pengeluaran\FrmEntryPenggajianKaryawan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pengeluaran\FrmEntryPenggajianKaryawan.Designer.cs">
+      <DependentUpon>FrmEntryPenggajianKaryawan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pengeluaran\FrmEntryPembayaranKasbon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pengeluaran\FrmEntryPembayaranKasbon.Designer.cs">
+      <DependentUpon>FrmEntryPembayaranKasbon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pengeluaran\FrmEntryPengeluaranBiaya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pengeluaran\FrmEntryPengeluaranBiaya.Designer.cs">
+      <DependentUpon>FrmEntryPengeluaranBiaya.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pengeluaran\FrmEntryKasbon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pengeluaran\FrmEntryKasbon.Designer.cs">
+      <DependentUpon>FrmEntryKasbon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pengeluaran\FrmListKasbon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pengeluaran\FrmListKasbon.Designer.cs">
+      <DependentUpon>FrmListKasbon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pengeluaran\FrmListPenggajianKaryawan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pengeluaran\FrmListPenggajianKaryawan.Designer.cs">
+      <DependentUpon>FrmListPenggajianKaryawan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pengeluaran\FrmListPengeluaranBiaya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pengeluaran\FrmListPengeluaranBiaya.Designer.cs">
+      <DependentUpon>FrmListPengeluaranBiaya.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\PrintReportHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Referensi\FrmEntryPenyesuaianStok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\FrmEntryPenyesuaianStok.Designer.cs">
+      <DependentUpon>FrmEntryPenyesuaianStok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\FrmEntryKaryawan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\FrmEntryKaryawan.Designer.cs">
+      <DependentUpon>FrmEntryKaryawan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\FrmEntryJenisPengeluaran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\FrmEntryJenisPengeluaran.Designer.cs">
+      <DependentUpon>FrmEntryJenisPengeluaran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\FrmEntryProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\FrmEntryProduk.Designer.cs">
+      <DependentUpon>FrmEntryProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\FrmEntryJabatan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\FrmEntryJabatan.Designer.cs">
+      <DependentUpon>FrmEntryJabatan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\FrmEntrySupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\FrmEntrySupplier.Designer.cs">
+      <DependentUpon>FrmEntrySupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\FrmEntryCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\FrmEntryCustomer.Designer.cs">
+      <DependentUpon>FrmEntryCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\FrmEntryGolongan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\FrmEntryGolongan.Designer.cs">
+      <DependentUpon>FrmEntryGolongan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\FrmImportDataCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\FrmImportDataCustomer.Designer.cs">
+      <DependentUpon>FrmImportDataCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\FrmImportDataSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\FrmImportDataSupplier.Designer.cs">
+      <DependentUpon>FrmImportDataSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\FrmImportDataProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\FrmImportDataProduk.Designer.cs">
+      <DependentUpon>FrmImportDataProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\FrmImportDataGolongan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\FrmImportDataGolongan.Designer.cs">
+      <DependentUpon>FrmImportDataGolongan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\FrmListPenyesuaianStok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\FrmListPenyesuaianStok.Designer.cs">
+      <DependentUpon>FrmListPenyesuaianStok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\FrmListKaryawan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\FrmListKaryawan.Designer.cs">
+      <DependentUpon>FrmListKaryawan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\FrmListJenisPengeluaran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\FrmListJenisPengeluaran.Designer.cs">
+      <DependentUpon>FrmListJenisPengeluaran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\FrmListJabatan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\FrmListJabatan.Designer.cs">
+      <DependentUpon>FrmListJabatan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\FrmListProdukWithNavigation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\FrmListProdukWithNavigation.Designer.cs">
+      <DependentUpon>FrmListProdukWithNavigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\FrmListSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\FrmListSupplier.Designer.cs">
+      <DependentUpon>FrmListSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\FrmListCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\FrmListCustomer.Designer.cs">
+      <DependentUpon>FrmListCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\FrmListGolongan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\FrmListGolongan.Designer.cs">
+      <DependentUpon>FrmListGolongan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\FrmEntryAlamatKirim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\FrmEntryAlamatKirim.Designer.cs">
+      <DependentUpon>FrmEntryAlamatKirim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\FrmEntryPembayaranPiutangPenjualanProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\FrmEntryPembayaranPiutangPenjualanProduk.Designer.cs">
+      <DependentUpon>FrmEntryPembayaranPiutangPenjualanProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\FrmEntryPenjualanProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\FrmEntryPenjualanProduk.Designer.cs">
+      <DependentUpon>FrmEntryPenjualanProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\FrmEntryReturPenjualanProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\FrmEntryReturPenjualanProduk.Designer.cs">
+      <DependentUpon>FrmEntryReturPenjualanProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\FrmEntryReturPembelianProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\FrmEntryReturPembelianProduk.Designer.cs">
+      <DependentUpon>FrmEntryReturPembelianProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\FrmEntryPembayaranHutangPembelianProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\FrmEntryPembayaranHutangPembelianProduk.Designer.cs">
+      <DependentUpon>FrmEntryPembayaranHutangPembelianProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\FrmEntryPembelianProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\FrmEntryPembelianProduk.Designer.cs">
+      <DependentUpon>FrmEntryPembelianProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\FrmListPembayaranPiutangPenjualanProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\FrmListPembayaranPiutangPenjualanProduk.Designer.cs">
+      <DependentUpon>FrmListPembayaranPiutangPenjualanProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\FrmListPenjualanProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\FrmListPenjualanProduk.Designer.cs">
+      <DependentUpon>FrmListPenjualanProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\FrmListReturPenjualanProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\FrmListReturPenjualanProduk.Designer.cs">
+      <DependentUpon>FrmListReturPenjualanProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\FrmListReturPembelianProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\FrmListReturPembelianProduk.Designer.cs">
+      <DependentUpon>FrmListReturPembelianProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\FrmListPembayaranHutangPembelianProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\FrmListPembayaranHutangPembelianProduk.Designer.cs">
+      <DependentUpon>FrmListPembayaranHutangPembelianProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\FrmListPembelianProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\FrmListPembelianProduk.Designer.cs">
+      <DependentUpon>FrmListPembelianProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\FrmPreviewLabelNotaPenjualan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\FrmPreviewLabelNotaPenjualan.Designer.cs">
+      <DependentUpon>FrmPreviewLabelNotaPenjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\FrmPreviewNotaPenjualan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\FrmPreviewNotaPenjualan.Designer.cs">
+      <DependentUpon>FrmPreviewNotaPenjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\PrinterMiniPOS\IPrinterMiniPOS.cs" />
+    <Compile Include="Transaksi\PrinterMiniPOS\PrinterMiniPOS.cs" />
+    <Compile Include="UI.Template\BaseFrmList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Template\BaseFrmLookup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Template\FrmDialogImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Template\FrmDialogImport.Designer.cs">
+      <DependentUpon>FrmDialogImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Template\FrmListEmptyBodyWithNavigation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Template\FrmListEmptyBodyWithNavigation.Designer.cs">
+      <DependentUpon>FrmListEmptyBodyWithNavigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Template\FrmListStandardWithNavigation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Template\FrmListStandardWithNavigation.Designer.cs">
+      <DependentUpon>FrmListStandardWithNavigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Template\FrmLookupEmptyBody.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Template\FrmLookupEmptyBody.Designer.cs">
+      <DependentUpon>FrmLookupEmptyBody.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Template\FrmLookupStandard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Template\FrmLookupStandard.Designer.cs">
+      <DependentUpon>FrmLookupStandard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Template\FrmEntryStandard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Template\FrmEntryStandard.Designer.cs">
+      <DependentUpon>FrmEntryStandard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Template\FrmListEmptyBody.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Template\FrmListEmptyBody.Designer.cs">
+      <DependentUpon>FrmListEmptyBody.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Template\FrmListStandard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Template\FrmListStandard.Designer.cs">
+      <DependentUpon>FrmListStandard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Template\FrmPreviewReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Template\FrmPreviewReport.Designer.cs">
+      <DependentUpon>FrmPreviewReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Template\FrmSettingReportEmptyBody.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Template\FrmSettingReportEmptyBody.Designer.cs">
+      <DependentUpon>FrmSettingReportEmptyBody.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Template\FrmSettingReportStandard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Template\FrmSettingReportStandard.Designer.cs">
+      <DependentUpon>FrmSettingReportStandard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\AdvancedTextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\FilterRangeTanggal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\FilterRangeTanggal.Designer.cs">
+      <DependentUpon>FilterRangeTanggal.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Laporan\FrmLapStokProduk.resx">
+      <DependentUpon>FrmLapStokProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lookup\FrmLookupCekOngkir.resx">
+      <DependentUpon>FrmLookupCekOngkir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lookup\FrmLookupItemNota.resx">
+      <DependentUpon>FrmLookupItemNota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lookup\FrmLookupMinimalStok.resx">
+      <DependentUpon>FrmLookupMinimalStok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lookup\FrmLookupNota.resx">
+      <DependentUpon>FrmLookupNota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lookup\FrmLookupReferensi.resx">
+      <DependentUpon>FrmLookupReferensi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pengaturan\FrmPengaturanUmum.resx">
+      <DependentUpon>FrmPengaturanUmum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pengaturan\FrmProfilPerusahaan.resx">
+      <DependentUpon>FrmProfilPerusahaan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pengaturan\FrmEntryOperator.resx">
+      <DependentUpon>FrmEntryOperator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pengaturan\FrmEntryHakAkses.resx">
+      <DependentUpon>FrmEntryHakAkses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pengaturan\FrmListOperator.resx">
+      <DependentUpon>FrmListOperator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pengaturan\FrmListHakAkses.resx">
+      <DependentUpon>FrmListHakAkses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pengeluaran\FrmEntryPenggajianKaryawan.resx">
+      <DependentUpon>FrmEntryPenggajianKaryawan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pengeluaran\FrmEntryPembayaranKasbon.resx">
+      <DependentUpon>FrmEntryPembayaranKasbon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pengeluaran\FrmEntryPengeluaranBiaya.resx">
+      <DependentUpon>FrmEntryPengeluaranBiaya.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pengeluaran\FrmEntryKasbon.resx">
+      <DependentUpon>FrmEntryKasbon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pengeluaran\FrmListKasbon.resx">
+      <DependentUpon>FrmListKasbon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pengeluaran\FrmListPenggajianKaryawan.resx">
+      <DependentUpon>FrmListPenggajianKaryawan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pengeluaran\FrmListPengeluaranBiaya.resx">
+      <DependentUpon>FrmListPengeluaranBiaya.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Referensi\FrmEntryPenyesuaianStok.resx">
+      <DependentUpon>FrmEntryPenyesuaianStok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\FrmEntryKaryawan.resx">
+      <DependentUpon>FrmEntryKaryawan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\FrmEntryJenisPengeluaran.resx">
+      <DependentUpon>FrmEntryJenisPengeluaran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\FrmEntryProduk.resx">
+      <DependentUpon>FrmEntryProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\FrmEntryJabatan.resx">
+      <DependentUpon>FrmEntryJabatan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\FrmEntrySupplier.resx">
+      <DependentUpon>FrmEntrySupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\FrmEntryCustomer.resx">
+      <DependentUpon>FrmEntryCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\FrmEntryGolongan.resx">
+      <DependentUpon>FrmEntryGolongan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\FrmListPenyesuaianStok.resx">
+      <DependentUpon>FrmListPenyesuaianStok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\FrmListKaryawan.resx">
+      <DependentUpon>FrmListKaryawan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\FrmListJenisPengeluaran.resx">
+      <DependentUpon>FrmListJenisPengeluaran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\FrmListJabatan.resx">
+      <DependentUpon>FrmListJabatan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\FrmListProdukWithNavigation.resx">
+      <DependentUpon>FrmListProdukWithNavigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\FrmListSupplier.resx">
+      <DependentUpon>FrmListSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\FrmListCustomer.resx">
+      <DependentUpon>FrmListCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\FrmListGolongan.resx">
+      <DependentUpon>FrmListGolongan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\FrmEntryAlamatKirim.resx">
+      <DependentUpon>FrmEntryAlamatKirim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\FrmEntryPembayaranPiutangPenjualanProduk.resx">
+      <DependentUpon>FrmEntryPembayaranPiutangPenjualanProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\FrmEntryPenjualanProduk.resx">
+      <DependentUpon>FrmEntryPenjualanProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\FrmEntryReturPenjualanProduk.resx">
+      <DependentUpon>FrmEntryReturPenjualanProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\FrmEntryReturPembelianProduk.resx">
+      <DependentUpon>FrmEntryReturPembelianProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\FrmEntryPembayaranHutangPembelianProduk.resx">
+      <DependentUpon>FrmEntryPembayaranHutangPembelianProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\FrmEntryPembelianProduk.resx">
+      <DependentUpon>FrmEntryPembelianProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\FrmListPembayaranPiutangPenjualanProduk.resx">
+      <DependentUpon>FrmListPembayaranPiutangPenjualanProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\FrmListPenjualanProduk.resx">
+      <DependentUpon>FrmListPenjualanProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\FrmListReturPenjualanProduk.resx">
+      <DependentUpon>FrmListReturPenjualanProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\FrmListReturPembelianProduk.resx">
+      <DependentUpon>FrmListReturPembelianProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\FrmListPembayaranHutangPembelianProduk.resx">
+      <DependentUpon>FrmListPembayaranHutangPembelianProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\FrmListPembelianProduk.resx">
+      <DependentUpon>FrmListPembelianProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\FrmPreviewLabelNotaPenjualan.resx">
+      <DependentUpon>FrmPreviewLabelNotaPenjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\FrmPreviewNotaPenjualan.resx">
+      <DependentUpon>FrmPreviewNotaPenjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Template\FrmDialogImport.resx">
+      <DependentUpon>FrmDialogImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Template\FrmListEmptyBodyWithNavigation.resx">
+      <DependentUpon>FrmListEmptyBodyWithNavigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Template\FrmListStandardWithNavigation.resx">
+      <DependentUpon>FrmListStandardWithNavigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Template\FrmLookupEmptyBody.resx">
+      <DependentUpon>FrmLookupEmptyBody.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Template\FrmLookupStandard.resx">
+      <DependentUpon>FrmLookupStandard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Template\FrmEntryStandard.resx">
+      <DependentUpon>FrmEntryStandard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Template\FrmListEmptyBody.resx">
+      <DependentUpon>FrmListEmptyBody.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Template\FrmListStandard.resx">
+      <DependentUpon>FrmListStandard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Template\FrmPreviewReport.resx">
+      <DependentUpon>FrmPreviewReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Template\FrmSettingReportEmptyBody.resx">
+      <DependentUpon>FrmSettingReportEmptyBody.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Template\FrmSettingReportStandard.resx">
+      <DependentUpon>FrmSettingReportStandard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\FilterRangeTanggal.resx">
+      <DependentUpon>FilterRangeTanggal.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\OpenRetail.Bll.Api\OpenRetail.Bll.Api.csproj">
+      <Project>{24e6fae6-2f30-4b86-bbe7-4c88fb631956}</Project>
+      <Name>OpenRetail.Bll.Api</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenRetail.Bll.Service\OpenRetail.Bll.Service.csproj">
+      <Project>{2a5e29ae-358a-4129-b28a-9a1425a90de0}</Project>
+      <Name>OpenRetail.Bll.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenRetail.Model\OpenRetail.Model.csproj">
+      <Project>{6b9cabad-1a6c-4323-8548-bd5f3c12613c}</Project>
+      <Name>OpenRetail.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenRetail.Report\OpenRetail.Report.csproj">
+      <Project>{0619dad4-44fe-48ac-bcc9-6f1115574e1d}</Project>
+      <Name>OpenRetail.Report</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laporan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pengeluaran.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\penggajian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\golongan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\penyesuaian_stok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pembelian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\penjualan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logofix-small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logofix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="main-icon.ico" />
+    <None Include="Resources\open16.png" />
+    <None Include="Resources\donasi-fix.png" />
+    <None Include="Resources\label16.png" />
+    <None Include="Resources\address16.png" />
+    <None Include="Resources\import-data16.png" />
+    <None Include="Resources\excel16.png" />
+    <None Include="Resources\import-excel16.png" />
+    <None Include="Resources\import-excel32.png" />
+    <None Include="Resources\background.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if "$(ConfigurationName)" == "Debug" goto skip
+
+echo set lokasi folder deploy
+set DeployDir="$(SolutionDir)..\deploy\bin"
+if not exist %25DeployDir%25 mkdir %25DeployDir%25
+
+echo copy hasil build ke folder deploy
+copy /Y "$(TargetDir)*.*" %25DeployDir%25
+
+echo hapus file build yang tidak diperlukan
+del /s /q %25DeployDir%25\*.xml
+del /s /q %25DeployDir%25\*.pdb
+
+goto exit
+
+:skip
+echo "do nothing"
+
+:exit</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

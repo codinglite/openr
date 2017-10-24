@@ -1,0 +1,11 @@
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Bll.Api\bin\Debug\OpenRetail.Bll.Api.dll
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Bll.Api\bin\Debug\OpenRetail.Bll.Api.pdb
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Bll.Api\bin\Debug\OpenRetail.Model.dll
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Bll.Api\bin\Debug\FluentValidation.dll
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Bll.Api\bin\Debug\Dapper.Contrib.dll
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Bll.Api\bin\Debug\Newtonsoft.Json.dll
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Bll.Api\bin\Debug\OpenRetail.Model.pdb
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Bll.Api\bin\Debug\Newtonsoft.Json.xml
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Bll.Api\obj\Debug\OpenRetail.Bll.Api.csprojResolveAssemblyReference.cache
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Bll.Api\obj\Debug\OpenRetail.Bll.Api.dll
+D:\POOL\open-retail-1.1.0\src\OpenRetail.Bll.Api\obj\Debug\OpenRetail.Bll.Api.pdb
